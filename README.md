@@ -11,7 +11,10 @@
 
 ## 进度
 
-2022/4/14: Switch 语句 [视频链接🔗](https://www.bilibili.com/video/BV1jJ411c7s3?p=32&spm_id_from=pageDriver)
+2022/4/15 深夜: for 循环[视频链接🔗](https://www.bilibili.com/video/BV1jJ411c7s3?p=35&spm_id_from=pageDriver)  
+
+2022/4/14: Switch 语句 [视频链接🔗](https://www.bilibili.com/video/BV1jJ411c7s3?p=32&spm_id_from=pageDriver)  
+
 
 ## 目录
 
