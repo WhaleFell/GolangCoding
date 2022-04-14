@@ -9,6 +9,10 @@
 5. [B站视频教程2](https://www.bilibili.com/video/BV1jJ411c7s3?p=25&spm_id_from=pageDriver)
 6. [B站视频教程文档](https://github.com/rubyhan1314/Golang-100-Days/tree/master/Day01-15(Go%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80))
 
+## 进度
+
+2022/4/14: Switch 语句 [视频链接🔗](https://www.bilibili.com/video/BV1jJ411c7s3?p=32&spm_id_from=pageDriver)
+
 ## 目录
 
 1. 环境安装和搭建.  
