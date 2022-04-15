@@ -160,4 +160,34 @@ out:
 		}
 	}
 
+	/*
+		goto 语句
+			可以无条件地转移到过程中指定的行,通常结合判断语句使用
+		label: statement 标签语法
+	*/
+	var a float64 = 10
+
+LOOP:
+	for a > 20 {
+		if a == 15 {
+			a += 1
+			goto LOOP
+		}
+		fmt.Printf("a=%d\n", a)
+	}
+
+	// goto 集中处理错误
+	fmt.Println("-----------------------")
+	for i := 0; i < count; i++ {
+		for j := 0; j < count; j++ {
+			if j == 2 {
+				goto breakHere
+			}
+		}
+	}
+	//手动返回,避免执行入标签
+	return
+
+breakHere:
+	fmt.Println("done.....")
 }
