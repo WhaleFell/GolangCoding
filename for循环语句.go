@@ -142,4 +142,22 @@ out:
 		}
 	}
 
+	/*
+		打印 2-100 内的质数(只能被1和它本身整除)
+	*/
+	for i := 2; i <= 100; i++ {
+		// 优化: flag 记录是否是质数
+		flag := true
+		for j := 2; j < i; j++ {
+			if i%j == 0 {
+				flag = false
+				break
+			}
+			break
+		}
+		if flag {
+			fmt.Println("质数抓住它了!", i)
+		}
+	}
+
 }
