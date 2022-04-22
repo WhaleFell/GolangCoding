@@ -11,9 +11,12 @@
 
 ## 进度
 
-2022/4/15 深夜: for 循环[视频链接🔗](https://www.bilibili.com/video/BV1jJ411c7s3?p=35&spm_id_from=pageDriver)  
+**2022/4/23 凌晨**: `Array` 数组,数组的遍历,数组内存分析(值类型/引用类型),数组冒泡排序,多维数组 [视频链接🔗](https://www.bilibili.com/video/BV1jJ411c7s3?p=49&spm_id_from=pageDriver)  
+> 摸鱼感想: go好像也没有想象的那么难,过一遍视频就偷偷懒不写笔记了叭,以后再补笔记...  
 
-2022/4/14: Switch 语句 [视频链接🔗](https://www.bilibili.com/video/BV1jJ411c7s3?p=32&spm_id_from=pageDriver)  
+**2022/4/15 深夜**: `for` 循环 [视频链接🔗](https://www.bilibili.com/video/BV1jJ411c7s3?p=35&spm_id_from=pageDriver)  
+
+**2022/4/14**: `Switch` 语句 [视频链接🔗](https://www.bilibili.com/video/BV1jJ411c7s3?p=32&spm_id_from=pageDriver)  
 
 
 ## 目录
