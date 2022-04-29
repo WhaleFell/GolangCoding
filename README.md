@@ -10,6 +10,8 @@
 
 ## 进度
 
+**2022/4/29 晚修**: `string` 类型,`string`、`strconv` 包API [视频链接🔗](https://www.bilibili.com/video/BV1jJ411c7s3?p=62)
+
 **2022/4/28 晚修**: `Map` 的增删改查,遍历,排序,引用类型.[视频链接🔗](https://www.bilibili.com/video/BV1jJ411c7s3?p=58)
 
 **2022/4/24 晚修**: `Map` 的定义[视频链接🔗](https://www.bilibili.com/video/BV1jJ411c7s3?p=55&spm_id_from=pageDriver)
