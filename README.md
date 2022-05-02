@@ -10,7 +10,9 @@
 
 ## 进度
 
-**2022/4/29 晚修**: `string` 类型,`string`、`strconv` 包API [视频链接🔗](https://www.bilibili.com/video/BV1jJ411c7s3?p=62)
+**2022/5/2 五一小长假**: `struct`结构体,`pointer` 指针,`func` 函数. [视频链接第88集🔗](https://www.bilibili.com/video/BV1jJ411c7s3?p=88)
+
+**2022/4/29 晚修**: `string` 类型,`string`、`strconv` 包API [视频链接](https://www.bilibili.com/video/BV1jJ411c7s3?p=62)
 
 **2022/4/28 晚修**: `Map` 的增删改查,遍历,排序,引用类型.[视频链接🔗](https://www.bilibili.com/video/BV1jJ411c7s3?p=58)
 
