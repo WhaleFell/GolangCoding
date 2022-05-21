@@ -4,7 +4,7 @@ import re
 from pathlib import Path
 
 path = Path(__file__).parent.absolute()
-file_name = "go 接口.md"
+file_name = r"E:\coding\GolangCoding\notes\go type关键字.md"
 
 
 def read_md() -> str:
