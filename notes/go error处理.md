@@ -43,18 +43,18 @@ type error interface {
 ```    
 > `fmt.Println(err)` 会在内部执行 Error() 方法,返回错误的字符串信息.  
 
-![](https://cdn.jsdelivr.net/gh/WhaleFell/GolangCoding@master/notes/img/error-1.png)  
+![](img/error-1.png)  
 
 ### 从错误中获取更多信息
 > **断言判断接口底层类型** ,通过 `struct` 结构体的属性和方法获取更多的信息
 
 #### 使用 `struct` 类型属性
 
-![](https://cdn.jsdelivr.net/gh/WhaleFell/GolangCoding@master/notes/img/error-4.png)  
+![](img/error-4.png)  
 
 #### 调用 `struct` 类型的方法
 
-![](https://cdn.jsdelivr.net/gh/WhaleFell/GolangCoding@master/notes/img/error-5.png)  
+![](img/error-5.png)  
 
 #### 直接比较
 直接与错误类型的变量进行比较.     
@@ -79,12 +79,12 @@ func main() {
 ## 自定义 error
 
 ### 1. 通过 `errors.New("描述")`
-![](https://cdn.jsdelivr.net/gh/WhaleFell/GolangCoding@master/notes/img/error-2.png)
+![](img/error-2.png)
 
 ### 2. 通过 `fmt.Errorf()`  
 也可以使用 `fmt.Errorf()` 输出的错误更详细,支持格式化输出错误.  
 
-![](https://cdn.jsdelivr.net/gh/WhaleFell/GolangCoding@master/notes/img/error-3.png)  
+![](img/error-3.png)  
 
 ### 3. 定义错误
 ```go
