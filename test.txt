@@ -1,166 +1,73 @@
-# golang 变量
+# Go 接口
+**面向对象** 世界中的接口的一般定义是"**接口定义对象的行为**"。它表示让指定对象应该做什么。实现这种行为的方法（实现细节）是**针对对象**的。  
+在 `Go` 中，接口是**一组方法签名**。当类型为接口中的所有方法提供定义时，它被称为**实现接口**。它与OOP非常相似。接口指定了类型**应该具有**的方法，类型决定了**如何实现**这些方法。
 
-变量是计算机语言中能储存计算结果或能表示值的抽象概念。不同的变量保存的数据类型可能会不一样。  
+> 它把所有的具有共性的方法定义在一起，任何其他类型只要实现了这些方法就是实现了这个接口  
+> 接口定义了一组方法，如果某个对象实现了某个接口的所有方法，则此对象就实现了该接口。
 
-## 声明变量
+## 图示
+![](https://cdn.jsdelivr.net/gh/WhaleFell/GolangCoding@master/notes/img/interface-1.png)  
 
-G0语言中的**变量需要声明后才能使用**，同一作用域内不支持重复声明。并且G0语言的**变量声明后必须使用**。
+## 示例
+![](https://cdn.jsdelivr.net/gh/WhaleFell/GolangCoding@master/notes/img/interface-2.png)  
+![](https://cdn.jsdelivr.net/gh/WhaleFell/GolangCoding@master/notes/img/interface-4.png)  
+![](https://cdn.jsdelivr.net/gh/WhaleFell/GolangCoding@master/notes/img/interface-3.png)  
+> Go语言中接口和类型的实现方式是**非侵入式**的,接口定义的方法没有具体代码.
 
-## 声明变量的语法
+## 通过接口模拟多态
+
+### 多态的定义
+"一个事物的多种形态"  
+![](https://cdn.jsdelivr.net/gh/WhaleFell/GolangCoding@master/notes/img/interface-5.png)  
+
+就一个接口的实现:  
+1. 看成**实现本身的类型**，能够访问**实现类中的属性和方法**.  
+2. 看成是**对应的接口类型**，那就**只能够访问接口中的方法**.  
+
+接口的用法：  
+1. 一个函数如果接受**接口类型作为参数**，那么实际上**可以传入该接口的任意实现类**对象作为参数。  
+2. 定义一个类型为**接口类型**，实际上可以**赋值为任意实现类的对象**.   
+
+鸭子类型:  
+> 待补充...
+
+## 空接口
+`interface{}` 不包含任何的方法,所以**任何类型都是空接口的实现类**,因此空接口可以储存任何类型的数值.  
+![](https://cdn.jsdelivr.net/gh/WhaleFell/GolangCoding@master/notes/img/interface-7.png)  
+
+### 空接口定义任意类型的数据
+![](https://cdn.jsdelivr.net/gh/WhaleFell/GolangCoding@master/notes/img/interface-6.png)  
+
+### 空接口作为函数的参数
+表示函数的参数可以是任意类型,相当于 Python 的 `typing.Any`  
+
+![](https://cdn.jsdelivr.net/gh/WhaleFell/GolangCoding@master/notes/img/interface-8.png)  
+`fmt` 包就是应用了空接口,可以传入任何参数.  
+`fmt` 包下的 `Print` 系列函数:  
 ```go
-var identifier type
-/* 
-var:声明变量关键字
-1dent1fier:变量名称
-type:变量类型
-*/
-```
-e.g.  
-```go
-package main
-
-import "fmt"
-
-func main() {
-	var name string
-	fmt.Printf("name: %v\n", name)
-}
-```
-
-## 批量声明
-```go
-package main
-
-import "fmt"
-
-func main() {
-	// 批量声明
-	var (
-		name string
-		age  int
-		b    bool
-	)
-
-	name = "hyy"
-	age = 14
-	b = false
-
-	fmt.Printf("name: %v\n", name)
-	fmt.Printf("age: %v\n", age)
-	fmt.Printf("b: %v\n", b)
-}
-```
-
-## 变量的初始化
-
-G0语言在声明变量的时候，会**自动对变量对应的内存区域进行初始化操作**。每个变量会被初始化成其类型的**默认值**，例如：整型和浮点型变量的默认值为`0`。字符串变量的默认值为空字符串`""`。布尔型变量默认为`false`,切片、函数、指针变量的默认为`nil`.
-
-### 变量初始化语法
-
-```go
-var 变量名 类型 = 表达式
+func Print(a ...interface{}) (n int,err error)
+func Printf(format string,a ...interface{}) (n int,err error)
+func Println(a ...interface{}) (n int,err error)
 ```
 
-e.g.  
-```go
-package main
+### 复合数据结构使用空接口
+![](https://cdn.jsdelivr.net/gh/WhaleFell/GolangCoding@master/notes/img/interface-9.png)  
+![](https://cdn.jsdelivr.net/gh/WhaleFell/GolangCoding@master/notes/img/interface-10.png)  
 
-import "fmt"
+## 接口嵌套
+接口允许多继承.  
+![](https://cdn.jsdelivr.net/gh/WhaleFell/GolangCoding@master/notes/img/interface-11.png)  
+如果 Cat 想实现接口C,不仅要实现接口C自己的方法,还要实现接口C继承的接口A B中的方法.  
+![](https://cdn.jsdelivr.net/gh/WhaleFell/GolangCoding@master/notes/img/interface-12.png)  
+![](https://cdn.jsdelivr.net/gh/WhaleFell/GolangCoding@master/notes/img/interface-13.png)  
+![](https://cdn.jsdelivr.net/gh/WhaleFell/GolangCoding@master/notes/img/insterface-14.png)  
 
-func main() {
-	//变量初始化 赋初始值
-	var title string = "lovehyy"
-	var site string = "http://baidu.com"
-	var agge int = 30
-}
-```
+## 接口断言
+前面说过，因为空接口 `interface` 没有定义任何函数，因此 `Go` 中**所有类型都实现了空接口**。当一个函数的形参是 `interface{}` ,那么在函数中，需要对形参**进行断言**，从而**得到它的真实类型**。
 
-### 类型推断
+![](https://cdn.jsdelivr.net/gh/WhaleFell/GolangCoding@master/notes/img/interface-15.png)  
 
-```go
-package main
-
-import "fmt"
-
-func main() {
-	// 类型推断
-	var name = "hyy"
-	var age = 20
-	var b = true
-	fmt.Printf("name: %v\n", name)
-	fmt.Printf("age: %v\n", age)
-	fmt.Printf("b: %v\n", b)
-}
-```
-
-### 批量初始化
-```go
-package main
-
-import "fmt"
-
-func main() {
-	//批量初始化
-	var name, age, b = "tom", 20, true
-	fmt.Printf("name: %v\n", name)
-	fmt.Printf("age: %v\n", age)
-	fmt.Printf("b: %v\n", b)
-}
-```
-
-## 短变量声明
-
-在函数内部，可以使用`:=`运算符对变量进行声明和初始化。  
-
-```go
-package main
-
-import "fmt"
-
-// name := "hyy" 不能用于函数外部
-
-func main() {
-	//短变量声明 := 不能用于函数外部
-	name := "hyy"
-	age := 51
-	b := true
-	fmt.Printf("name: %v\n", name)
-	fmt.Printf("age: %v\n", age)
-	fmt.Printf("b: %v\n", b)
-}
-```
-
-> **注意：这种方法只适合在函数内部，函数外面不能使用。**
-
-## 匿名变量
-
-如果我们接收到**多个变量**，有一些**变量使用不到**，可以**使用下划线_表示变量名称**，这种变量叫做匿名变量。e.g.  
-
-1. 函数定义  
-```go
-func getNameAndAge() (name string, age int) {
-	return "hyy", 30
-}
-```  
-等价于： 
-```go
-func getNameAndAge() (string, int) {
-	return "hyy", 30
-}
-```  
-
-2. 接收函数返回值
-```go
-package main
-
-import "fmt"
-
-func getNameAndAge() (string, int) {
-	return "hyy", 30
-}
-func main() {
-	// 调用函数,匿名变量,丢弃age
-	name, _ := getNameAndAge()
-	fmt.Printf("name: %v\n", name)
-}
-```
+方法一:  
+![](https://cdn.jsdelivr.net/gh/WhaleFell/GolangCoding@master/notes/img/interface-16.png)  
+方法二:  
+![](https://cdn.jsdelivr.net/gh/WhaleFell/GolangCoding@master/notes/img/interface-17.png)  

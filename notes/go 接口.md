@@ -30,3 +30,44 @@
 
 鸭子类型:  
 > 待补充...
+
+## 空接口
+`interface{}` 不包含任何的方法,所以**任何类型都是空接口的实现类**,因此空接口可以储存任何类型的数值.  
+![](img/interface-7.png)  
+
+### 空接口定义任意类型的数据
+![](img/interface-6.png)  
+
+### 空接口作为函数的参数
+表示函数的参数可以是任意类型,相当于 Python 的 `typing.Any`  
+
+![](img/interface-8.png)  
+`fmt` 包就是应用了空接口,可以传入任何参数.  
+`fmt` 包下的 `Print` 系列函数:  
+```go
+func Print(a ...interface{}) (n int,err error)
+func Printf(format string,a ...interface{}) (n int,err error)
+func Println(a ...interface{}) (n int,err error)
+```
+
+### 复合数据结构使用空接口
+![](img/interface-9.png)  
+![](img/interface-10.png)  
+
+## 接口嵌套
+接口允许多继承.  
+![](img/interface-11.png)  
+如果 Cat 想实现接口C,不仅要实现接口C自己的方法,还要实现接口C继承的接口A B中的方法.  
+![](img/interface-12.png)  
+![](img/interface-13.png)  
+![](img/insterface-14.png)  
+
+## 接口断言
+前面说过，因为空接口 `interface` 没有定义任何函数，因此 `Go` 中**所有类型都实现了空接口**。当一个函数的形参是 `interface{}` ,那么在函数中，需要对形参**进行断言**，从而**得到它的真实类型**。
+
+![](img/interface-15.png)  
+
+方法一:  
+![](img/interface-16.png)  
+方法二:  
+![](img/interface-17.png)  
