@@ -1,15 +1,3 @@
-
----
-title: Golang 学习笔记——go 包的使用
-date: 2022-05-28 23-01-40
-updated: 2022-05-28 23-01-40
-categories: Golang
-tags: [Golang, Coding]
-description: Golang 学习笔记——go 包的使用
-index_img: https://cdn.jsdelivr.net/gh/WhaleFell/GolangCoding@master/icon_img.png
-banner_img: https://cdn.jsdelivr.net/gh/WhaleFell/GolangCoding@master/icon_img.png
----
-
 # Go 包的使用
 关于包的使用:  
 1. 一个目录下的文件归属一个包。`package` 的声明要一致  
@@ -34,16 +22,16 @@ banner_img: https://cdn.jsdelivr.net/gh/WhaleFell/GolangCoding@master/icon_img.p
 ## 两个函数的执行顺序
 
 1. 对于同一个 Go 文件,从上到下执行    
-![](https://cdn.jsdelivr.net/gh/WhaleFell/GolangCoding@master/notes/img/package-1.png)  
+![](img/package-1.png)  
 
 2. 对于同一个 package 中的不同文件,将文件名按字符串进行从小到大排序,之后顺序调用各文件中的 `init()` 函数.
-![](https://cdn.jsdelivr.net/gh/WhaleFell/GolangCoding@master/notes/img/package-2.png)  
+![](img/package-2.png)  
 
 3. 对于不同的 package,如果不相互依赖的话，按照 main 包中 import 的顺序调用其他包中的 `init()` 函数。    
 
 4. 如果 package 存在依赖,调用顺序为最后被依赖的最先被初始化.  
 例如：导入顺序 main->A->B->C ,则初始化顺序为 C->B->A->main ,一次执行对应的init方法。main包总是被最后一个初始化，因为它总是依赖别的包.   
-![](https://cdn.jsdelivr.net/gh/WhaleFell/GolangCoding@master/notes/img/package-3.png)  
+![](img/package-3.png)  
 
 5. 避免出现 **循环 import** ,例如：`A->B->C->A`.  
 一个包被其它多个包 import ,.但只能被初始化一次  
