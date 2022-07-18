@@ -7,6 +7,7 @@
 4. [《the-way-to-go》(主要)](https://github.com/unknwon/the-way-to-go_ZH_CN)
 5. [B站视频教程2](https://www.bilibili.com/video/BV1jJ411c7s3?p=25&spm_id_from=pageDriver)
 6. [B站视频教程文档(主要)](https://github.com/rubyhan1314/Golang-100-Days/tree/master/Day01-15(Go%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80))
+7. [韩茹老师个人Channel(Go进阶)](https://www.bilibili.com/video/BV1Hx411Z78D)
 
 ## 进度
 
