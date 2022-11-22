@@ -40,8 +40,11 @@
 
 > 1. 使用go mod仓库中可以不用再上传依赖代码包，防止代码仓库过大浪费以及多个项目同时用包时的浪费
 > 2. 可以管理引用包的版本，这一点是gopath（src模式）和`vendor`做不到的
-> -   如果依赖 `gopath` 不同项目如果引用了同一个软件包的不同版本，就会造成编译麻烦
+> 3. 如果依赖 `gopath` 不同项目如果引用了同一个软件包的不同版本，就会造成编译麻烦
+
+gopath是go之前的默认策略，每个项目在运行时都要严格放在`src`目录下，而go mod不用。
+`Go mod`的优点：
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ2NDA5OTk0Nyw2OTI0OTA4NzhdfQ==
+eyJoaXN0b3J5IjpbNTQxMjkwMDg1LDY5MjQ5MDg3OF19
 -->
