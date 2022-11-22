@@ -43,8 +43,22 @@
 > 3. 如果依赖 `gopath` 不同项目如果引用了同一个软件包的不同版本，就会造成编译麻烦
 
 gopath是go之前的默认策略，每个项目在运行时都要严格放在`src`目录下，而go mod不用。
-`Go mod`的优点：
 
+`Go mod`的优点：
+-   自动下载依赖包
+-   项目不必放在`$GOPATH/src`内了
+-   项目内会生成一个`go.mod`文件，列出包依赖
+-   第三方包会准确的指定版本号
+-   对于已经转移的包，可以用 `replace` 申明替换，不需要改代码
+
+### 配置
+```shell
+# 设置环境变量
+go env GO111MODULE=on
+
+
+
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTQxMjkwMDg1LDY5MjQ5MDg3OF19
+eyJoaXN0b3J5IjpbLTE4NDU1MzkxNzEsNjkyNDkwODc4XX0=
 -->
