@@ -13,6 +13,7 @@
 透过 **stackedit.cn** 平台方便便捷的在线阅读和编辑此文档。
 [stackedit.cn](https://stackedit.cn/app#providerId=githubWorkspace&owner=WhaleFell&repo=GolangCoding&branch=master)
 
+
 ## 进度
 
 **2022/5/2 五一小长假**: `struct`结构体,`pointer` 指针,`func` 函数. [视频链接第88集🔗](https://www.bilibili.com/video/BV1jJ411c7s3?p=88)
@@ -38,5 +39,5 @@
 1. 环境安装和搭建.  
 2. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkwMjA0NDQ2OV19
+eyJoaXN0b3J5IjpbLTc5NzU1MDk2OSwxOTAyMDQ0NDY5XX0=
 -->
