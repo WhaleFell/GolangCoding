@@ -54,11 +54,15 @@ gopath是go之前的默认策略，每个项目在运行时都要严格放在`sr
 ### 配置
 ```shell
 # 设置环境变量
-go env GO111MODULE=on
-
-
-
+go env -w GO111MODULE="on"
+# china proxy
+go env -w GOPROXY=https://goproxy.io
+# 初始化 mod 项目
+go mod init [packetName]
+# add missing and remove unused modules
+# 自动增加包和删除无用包到 GOPATH 目录下
+go mod tidy
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NDU1MzkxNzEsNjkyNDkwODc4XX0=
+eyJoaXN0b3J5IjpbLTIwMjIwOTU2MjUsNjkyNDkwODc4XX0=
 -->
