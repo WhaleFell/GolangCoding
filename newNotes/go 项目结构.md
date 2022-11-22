@@ -63,6 +63,13 @@ go mod init [packetName]
 # 自动增加包和删除无用包到 GOPATH 目录下
 go mod tidy
 ```
+注意：只要在本地**设置一个公用path目录**就可以了，**全部的包都会下载到那里**，其他本地项目用到时就可以共享了
+
+自动生成了 `go.mod` 和 `go.sum` 文件，可以不用理会，下面是简单介绍.
+
+### go.mod
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMjIwOTU2MjUsNjkyNDkwODc4XX0=
+eyJoaXN0b3J5IjpbMTAzMzg4MjQxMSw2OTI0OTA4NzhdfQ==
 -->
