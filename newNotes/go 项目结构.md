@@ -68,8 +68,28 @@ go mod tidy
 自动生成了 `go.mod` 和 `go.sum` 文件，可以不用理会，下面是简单介绍.
 
 ### go.mod
+```go
+// 模块的引用路径
+module github.com/BingmingWong/module-test 
 
+// 项目使用的 go 版本
+go 1.14
+
+// 项目所需的直接依赖包及其版本
+require (
+example.com/apple v0.1.2
+)
+
+// 忽略指定版本的依赖包
+exclude example.com/banana v1.2.4
+
+// 由于在国内访问golang.org/x的各个包都需要翻墙，你可以在go.mod中使用replace替换成github上对应的库。
+replace（
+golang.org/x/text v0.3.0 = > github.com/golang/text v0.3.0
+)
+
+```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAzMzg4MjQxMSw2OTI0OTA4NzhdfQ==
+eyJoaXN0b3J5IjpbLTEwOTQyOTgzMDYsNjkyNDkwODc4XX0=
 -->
