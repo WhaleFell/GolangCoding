@@ -87,9 +87,15 @@ exclude example.com/banana v1.2.4
 replace（
 golang.org/x/text v0.3.0 = > github.com/golang/text v0.3.0
 )
-
 ```
 
+### go.sum
+每一行都是由 **模块路径**，**模块版本**，**哈希检验值** 组成，其中哈希检验值是用来保证当前缓存的模块不会被篡改。
+```shell
+<module> <version>/go.mod <hash>
+```
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwOTQyOTgzMDYsNjkyNDkwODc4XX0=
+eyJoaXN0b3J5IjpbODAwNTU0OTM0LDY5MjQ5MDg3OF19
 -->
