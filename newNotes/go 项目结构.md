@@ -25,7 +25,15 @@
 | | | |____add.go
 | | |____main.go
 ```
-
+![输入图片说明](/imgs/2022-11-22/hrvDgSCo9FodCkKa.png)
+注意点：  
+1.  `add.go`中的Add函数名首字母必须大写， 比如Add, Addxxx.只有大写的才是Public权限，外面的包才能访问，否则只能自己文件夹下代码才能访问
+    
+2.  `add.go`的改名为addyyy.go也可以，查找add包的时候，并不会根据add.go这个文件名来查找。而是根据文件夹名来查找，一个文件夹下的所有文件都属于同一个包。所以函数变量自然不能重复。
+    
+3.  `main`中调用add.Add(1,2)时，add是包， 必须跟`add.go`中的`package`处的包名一致，否则报错。
+    
+4.  import后， 怎么去查找对应的包呢？ 思考一下， 很简单，无非就是GOROOT和GOPATH. 也应该明白了， src这个目录名可不是能随便取的。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI0OTI1MzcyOSw2OTI0OTA4NzhdfQ==
+eyJoaXN0b3J5IjpbMTk0MDI1NDcxLDY5MjQ5MDg3OF19
 -->
