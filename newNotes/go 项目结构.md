@@ -95,7 +95,22 @@ golang.org/x/text v0.3.0 = > github.com/golang/text v0.3.0
 <module> <version>/go.mod <hash>
 ```
 
+### Go mod 命令使用
+`go mod init`：初始化go mod， 生成go.mod文件，后可接参数指定 module 名，上面已经演示过。
+`go mod download`：手动触发下载依赖包到本地cache（默认为$GOPATH/pkg/mod目录）
+`go mod graph`：打印项目的模块依赖结构
+`go mod tidy` ：添加缺少的包，且删除无用的包
+`go mod verify` ：校验模块是否被篡改过
+`go mod why`：查看为什么需要依赖
+go mod vendor ：导出项目所有依赖到vendor下
+
+写入go.mod有两种方法：
+
+-   你只要在项目中有 import 并使用或者使用下划线强制占用，然后 go build 时 go module 就会自动下载并添加。
+-   `go mod tidy`
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODAwNTU0OTM0LDY5MjQ5MDg3OF19
+eyJoaXN0b3J5IjpbLTQ5MjMwMTY1NSw4MDA1NTQ5MzQsNjkyND
+kwODc4XX0=
 -->
