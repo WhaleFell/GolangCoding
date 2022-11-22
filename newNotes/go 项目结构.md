@@ -102,15 +102,16 @@ golang.org/x/text v0.3.0 = > github.com/golang/text v0.3.0
 `go mod tidy` ：添加缺少的包，且删除无用的包
 `go mod verify` ：校验模块是否被篡改过
 `go mod why`：查看为什么需要依赖
-go mod vendor ：导出项目所有依赖到vendor下
+`go mod vendor` ：导出项目所有依赖到vendor下
 
 写入go.mod有两种方法：
 
 -   你只要在项目中有 import 并使用或者使用下划线强制占用，然后 go build 时 go module 就会自动下载并添加。
 -   `go mod tidy`
 
+参考：[https://golang-minibear2333.github.io/1.base/1-3-go-mod/#134-go-mod-%e5%91%bd%e4%bb%a4%e7%9a%84%e4%bd%bf%e7%94%a8](https://golang-minibear2333.github.io/1.base/1-3-go-mod/#134-go-mod-%e5%91%bd%e4%bb%a4%e7%9a%84%e4%bd%bf%e7%94%a8)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ5MjMwMTY1NSw4MDA1NTQ5MzQsNjkyND
+eyJoaXN0b3J5IjpbLTc3Nzk4NDk0OSw4MDA1NTQ5MzQsNjkyND
 kwODc4XX0=
 -->
