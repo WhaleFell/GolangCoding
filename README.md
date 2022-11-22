@@ -10,7 +10,7 @@
 7. [韩茹老师个人Channel(Go进阶)](https://www.bilibili.com/video/BV1Hx411Z78D)
 
 ## 在线阅读和编辑
-透过 **stackedit.cn** 平台方便便捷的在线阅读和编辑此文档。
+透过 **stackedit.cn** 平台方便便捷的在线阅读和编辑此文档。  
 [stackedit.cn](https://stackedit.cn/app#providerId=githubWorkspace&owner=WhaleFell&repo=GolangCoding&branch=master)
 ![输入图片说明](/imgs/2022-11-22/XFLx7tjB78ugocNR.png)
 
@@ -39,6 +39,6 @@
 1. 环境安装和搭建.  
 2. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjg4ODk2ODUyLC03OTc1NTA5NjksMTkwMj
-A0NDQ2OV19
+eyJoaXN0b3J5IjpbLTc3OTc5NjIwNCw2ODg4OTY4NTIsLTc5Nz
+U1MDk2OSwxOTAyMDQ0NDY5XX0=
 -->
