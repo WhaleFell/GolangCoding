@@ -8,8 +8,9 @@
 5. [B站视频教程2](https://www.bilibili.com/video/BV1jJ411c7s3?p=25&spm_id_from=pageDriver)
 6. [B站视频教程文档(主要)](https://github.com/rubyhan1314/Golang-100-Days/tree/master/Day01-15(Go%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80))
 7. [韩茹老师个人Channel(Go进阶)](https://www.bilibili.com/video/BV1Hx411Z78D)
+
 ## 在线阅读和编辑
-透过 **stackedit.cn** 平台方便bi
+透过 **stackedit.cn** 平台方便便捷的在线阅读和编辑此文档。
 [stackedit.cn](https://stackedit.cn/app#providerId=githubWorkspace&owner=WhaleFell&repo=GolangCoding&branch=master)
 
 ## 进度
@@ -37,5 +38,5 @@
 1. 环境安装和搭建.  
 2. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMjI4ODgzMDRdfQ==
+eyJoaXN0b3J5IjpbMTkwMjA0NDQ2OV19
 -->
