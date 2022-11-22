@@ -31,6 +31,8 @@
 2.  `add.go`的改名为addyyy.go也可以，查找add包的时候，**并不会根据add.go这个文件名来查找**。而是根据文件夹名来查找，一个文件夹下的所有文件都属于同一个包。所以函数变量自然不能重复。
 3.  `main`中调用add.Add(1,2)时，add是包， 必须跟`add.go`中的`package`处的包名一致，否则报错。
 4.  import后， 根据`GOROOT`和`GOPATH`查找对应的包，**src这个目录名可不是能随便取的**。
+### 引用第三方项目
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ3MTA3NDQ4Niw2OTI0OTA4NzhdfQ==
+eyJoaXN0b3J5IjpbMjg0OTAxMjc3LDY5MjQ5MDg3OF19
 -->
