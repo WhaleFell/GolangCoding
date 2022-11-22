@@ -17,6 +17,15 @@
 `Global GOPATH`可以弄一个公共项目，以后就把第三方的包直接装到这里，就可以**自动**在你的项目里引用了。
 ![输入图片说明](/imgs/2022-11-22/6SavhjegXmvXBois.png)
 
+## 引用包
+```tree
+|____src
+| |____main
+| | |____calc
+| | | |____add.go
+| | |____main.go
+```
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAyMzYxNDUwNSw2OTI0OTA4NzhdfQ==
+eyJoaXN0b3J5IjpbLTI0OTI1MzcyOSw2OTI0OTA4NzhdfQ==
 -->
